@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Inter var';
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+		src: url('/fonts/sans.woff2') format('woff2');
+		font-named-instance: 'Regular';
+	}
+
+	body {
+		@apply antialiased font-sans;
+	}
+
+	[root] {
+		display: contents;
+	}
+
+	main {
+		@apply min-h-screen max-w-4xl mx-auto px-4 py-2;
+	}
+}
